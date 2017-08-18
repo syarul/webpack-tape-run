@@ -11,7 +11,7 @@ This works well with ```webpack --watch``` as it will run your tests every time 
 ## Usage
 
 ```javascript
-var  WebpackTapeRun = require('webpack-tape-run')
+var WebpackTapeRun = require('webpack-tape-run')
 
 new WebpackTapeRun(opts)
 ```
