@@ -31,5 +31,5 @@ module.exports = {
 ```
 
 By default it parses the output to ```process.stdout```. You can specify a [reporter](https://github.com/sindresorhus/awesome-tap#reporters) as an option for the output, 
-if you using coverify, you need to also [transform-loader](https://github.com/webpack-contrib/transform-loader) in 
+if you using [coverify](https://github.com/substack/coverify), you need to also [transform-loader](https://github.com/webpack-contrib/transform-loader) in 
 the ```webpack.config.js``` file see [this](https://github.com/syarul/webpack-tape-run/blob/master/webpack.test.js) for a working example
