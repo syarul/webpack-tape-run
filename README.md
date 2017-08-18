@@ -7,6 +7,7 @@ This works well with ```webpack --watch``` as it will run your tests every time 
 ## Usage
 
 ```javascript
+var  WebpackTapeRun = require('webpack-tape-run')
 
 new WebpackTapeRun(opts)
 ```
@@ -14,8 +15,6 @@ new WebpackTapeRun(opts)
 - **opts.reporter**: *(string)* ***optional*** reporter options.
 
 ```javascript
-var  WebpackTapeRun = require('webpack-tape-run')
-
 module.exports = {
   ...
   new WebpackTapeRun({
