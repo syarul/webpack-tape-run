@@ -1,6 +1,6 @@
 # webpack-tape-run
 
-[![npm package](https://img.shields.io/badge/npm-0.0.5-blue.svg)](https://www.npmjs.com/package/webpack-tape-run)
+[![npm package](https://img.shields.io/badge/npm-0.0.6-blue.svg)](https://www.npmjs.com/package/webpack-tape-run)
 [![Build Status](https://travis-ci.org/syarul/webpack-tape-run.svg?branch=master)](https://travis-ci.org/syarul/webpack-tape-run)
 
 The excellent [tape-run](https://github.com/juliangruber/tape-run) ported as [webpack](https://webpack.github.io/) plugin
@@ -31,5 +31,5 @@ module.exports = {
 ```
 
 By default it parses the output to ```process.stdout```. You can specify a [reporter](https://github.com/sindresorhus/awesome-tap#reporters) as an option for the output, 
-if you using [coverify](https://github.com/substack/coverify), you need to also [transform-loader](https://github.com/webpack-contrib/transform-loader) in 
+if you using [coverify](https://github.com/substack/coverify), you also need [transform-loader](https://github.com/webpack-contrib/transform-loader) in 
 the ```webpack.config.js```. see [this](https://github.com/syarul/webpack-tape-run/blob/master/webpack.test.js) for a working example

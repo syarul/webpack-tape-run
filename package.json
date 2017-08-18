@@ -1,6 +1,6 @@
 {
   "name": "webpack-tape-run",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "The excellent tape-run ported as Webpack plugin",
   "main": "index.js",
   "scripts": {
