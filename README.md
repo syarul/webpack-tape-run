@@ -1,4 +1,8 @@
 # webpack-tape-run
+
+[![npm package](https://img.shields.io/badge/npm-0.0.2-blue.svg)](https://www.npmjs.com/package/webpack-tape-run)
+[![Build Status](https://travis-ci.org/syarul/webpack-tape-run.svg?branch=master)](https://travis-ci.org/syarul/webpack-tape-run)
+
 The excellent [tape-run](https://github.com/juliangruber/tape-run) ported as [webpack](https://webpack.github.io/) plugin
 
 Runs webpack with the generated output bundle in browser with tape-run (headless or non-headless) and parses the output as tape. 
