@@ -1,0 +1,38 @@
+{
+  "name": "webpack-tape-run",
+  "version": "0.0.1",
+  "description": "The excellent tape-run ported as Webpack plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --config webpack.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syarul/webpack-tape-run.git"
+  },
+  "keywords": [
+    "test",
+    "webpack",
+    "tape",
+    "tape-run"
+  ],
+  "author": "Shahrul Nizam Selamat <hottincup@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syarul/webpack-tape-run/issues"
+  },
+  "homepage": "https://github.com/syarul/webpack-tape-run#readme",
+  "dependencies": {
+    "execspawn": "^1.0.1",
+    "run-parallel": "^1.1.6",
+    "string-to-stream": "^1.1.0",
+    "tape-run": "^3.0.0",
+    "var": "^0.2.0"
+  },
+  "devDependencies": {
+    "coverify": "^1.4.1",
+    "tape": "^4.8.0",
+    "transform-loader": "^0.2.4",
+    "webpack": "^3.5.5"
+  }
+}
