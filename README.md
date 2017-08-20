@@ -6,7 +6,7 @@
 The excellent [tape-run](https://github.com/juliangruber/tape-run) ported as [webpack](https://webpack.github.io/) plugin
 
 Runs webpack with the generated output bundle in browser with tape-run (headless or non-headless) and parses the output as tape. 
-This works well with ```webpack --watch``` as it will run your tests every time a file changes.
+This works well with ```webpack --watch``` as it will run your test every time a file changed.
 
 ## Usage
 
@@ -20,14 +20,28 @@ new WebpackTapeRun(opts)
 
 ```javascript
 module.exports = {
-  ...
-  new WebpackTapeRun({
-    tapeRun: {
-      browser: 'phantomjs'
-    },
-    reporter: 'coverify' 
-  }),
-  ...
+  target: 'web',
+  entry: ['./test'],
+  node: {
+    fs: 'empty'
+  },
+  output: {
+    path: path.resolve(__dirname, './output'),
+    filename: 'test.js'
+  },
+  resolve: {
+    modules: ['node_modules'],
+    extensions: ['*', '.js']
+  },
+  plugins: [
+    new webpackTapeRun({
+      tapeRun: {
+       browser: 'phantomjs'
+      },
+      reporter: 'tap-spec'
+    })
+  ]
+}
 ```
 
 By default it parses the output to ```process.stdout```. You can specify a [reporter](https://github.com/sindresorhus/awesome-tap#reporters) as an option for the output, 
