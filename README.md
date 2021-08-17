@@ -10,7 +10,7 @@ This works well with ```webpack --watch``` as it will run your test every time a
 
 ## Webpack 5.x.x changes
 
-Updated to support Webpack 5.x.x, some modules require in the webpack config for this to work :-
+Updated to support webpack 5.x.x, some modules require in the webpack config for this to work :-
 - path-browserify
 - stream-browserify
 - process/browser
