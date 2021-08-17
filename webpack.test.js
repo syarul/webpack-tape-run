@@ -1,12 +1,10 @@
-var webpackTapeRun = require('./')
-var path = require('path')
+const WebpackTapeRun = require('./')
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
-  target: 'web',
-  entry: ['./test'],
-  node: {
-    fs: 'empty'
-  },
+  entry: './test',
+  mode: 'development',
   output: {
     path: path.resolve(__dirname, './output'),
     filename: 'test.js'
@@ -14,20 +12,33 @@ module.exports = {
   module: {
     rules: [
       {
-        loader: 'transform-loader?coverify',
+        loader: 'transform-loader',
         enforce: 'post',
-        exclude: [/node_modules/]
+        exclude: [/node_modules/],
+        options: {
+          coverify: true
+        }
       }
     ]
   },
   resolve: {
     modules: ['node_modules'],
-    extensions: ['*', '.js']
+    extensions: ['*', '.js'],
+    fallback: {
+      fs: false,
+      buffer: false,
+      path: require.resolve('path-browserify'),
+      stream: require.resolve('stream-browserify')
+    }
   },
+  target: 'web',
   plugins: [
-    new webpackTapeRun({
+    new webpack.ProvidePlugin({
+      process: 'process/browser'
+    }),
+    new WebpackTapeRun({
       tapeRun: {
-       /* browser: 'phantomjs'*/
+        /* browser: 'phantomjs' */
       },
       reporter: 'coverify'
     })
