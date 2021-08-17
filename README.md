@@ -5,7 +5,7 @@
 
 The excellent [tape-run](https://github.com/juliangruber/tape-run) ported as [webpack](https://webpack.github.io/) plugin
 
-Runs webpack with the generated output bundle in browser with tape-run (headless or non-headless) and parses the output as tape. 
+Runs webpack with the generated output bundle in browser with tape-run (headless or non-headless). 
 This works well with ```webpack --watch``` as it will run your test every time a file changed.
 
 ## Webpack 5.x.x changes
