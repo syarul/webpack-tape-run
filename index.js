@@ -11,7 +11,7 @@ class WebpackTapeRun {
   apply (compiler) {
     compiler.hooks.emit.tapAsync('WebpackTapeRun', run.bind(null, this.options))
 
-    async function run (options, compilation, callback) {
+    function run (options, compilation, callback) {
       const source = []
     
       compilation.chunks

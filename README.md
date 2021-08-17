@@ -1,6 +1,6 @@
 # webpack-tape-run
 
-[![npm package](https://img.shields.io/badge/npm-1.0.0-blue.svg)](https://www.npmjs.com/package/webpack-tape-run)
+[![npm package](https://img.shields.io/badge/npm-1.0.1-blue.svg)](https://www.npmjs.com/package/webpack-tape-run)
 [![Build Status](https://travis-ci.org/syarul/webpack-tape-run.svg?branch=master)](https://travis-ci.org/syarul/webpack-tape-run)
 
 The excellent [tape-run](https://github.com/juliangruber/tape-run) ported as [webpack](https://webpack.github.io/) plugin
@@ -10,7 +10,7 @@ This works well with ```webpack --watch``` as it will run your test every time a
 
 ## Webpack 5.x.x changes
 
-Updated to support webpack 5.x.x, some modules require in the webpack config for this to work :-
+Update to support webpack 5.x.x, some modules require in the webpack config for this to work :-
 - path-browserify
 - stream-browserify
 - process/browser
@@ -60,4 +60,4 @@ module.exports = {
 
 By default, output is pipe to ```process.stdout```. You can specify a [reporter](https://github.com/sindresorhus/awesome-tap#reporters) as an option for the output, 
 if you using [coverify](https://github.com/substack/coverify), you also need [transform-loader](https://github.com/webpack-contrib/transform-loader) in 
-the ```webpack.config.js```. see [this](https://github.com/syarul/webpack-tape-run/blob/master/webpack.test.js) for a working example
+the ```webpack.config.js```, check [this](https://github.com/syarul/webpack-tape-run/blob/master/webpack.test.js) for a working example

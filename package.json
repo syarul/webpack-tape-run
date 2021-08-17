@@ -1,6 +1,6 @@
 {
   "name": "webpack-tape-run",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The excellent tape-run ported as Webpack plugin",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "dependencies": {
     "execspawn": "^1.0.1",
     "run-parallel": "^1.1.6",
-    "tape-run": "^9.0.0",
+    "tape-run": "^5.0.0",
     "var": "^0.2.0"
   },
   "devDependencies": {
