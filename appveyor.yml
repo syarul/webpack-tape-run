@@ -1,5 +1,7 @@
 version: 1.0.{build}
 
+image: Ubuntu
+
 environment:
   nodejs_version: "12"
 
