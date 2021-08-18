@@ -2,18 +2,14 @@ version: 1.0.{build}
 
 image: Ubuntu
 
-environment:
-  matrix:
-    - nodejs_version: "12"
-
-platform:
-  - x86
-  - x64
+# environment:
+#   matrix:
+#     - nodejs_version: "12"
 
 install:
   # - ps: Install-Product node $env:nodejs_version
   # - sh: sudo apt-get update
-  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version) $env:PLATFORM
+  - sh: sudo apt-get install -y nodejs
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
   - npm install
