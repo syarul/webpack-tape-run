@@ -1,9 +1,9 @@
 # webpack-tape-run
 
-[![npm package](https://img.shields.io/badge/npm-1.0.2-blue.svg)](https://www.npmjs.com/package/webpack-tape-run)
+[![npm package](https://img.shields.io/badge/npm-1.0.3-blue.svg)](https://www.npmjs.com/package/webpack-tape-run)
 [![Build status](https://ci.appveyor.com/api/projects/status/5hk4mr4d50fd6ntm/branch/master?svg=true)](https://ci.appveyor.com/project/syarul/webpack-tape-run/branch/master)
 
-The excellent [tape-run](https://github.com/juliangruber/tape-run) ported as [webpack](https://webpack.github.io/) plugin
+Run [tape-run](https://github.com/juliangruber/tape-run) as [webpack](https://webpack.github.io/) plugin
 
 Runs webpack with the generated output bundle in browser with tape-run (headless or non-headless). 
 This works well with ```webpack --watch``` as it will run your test every time a file changed.

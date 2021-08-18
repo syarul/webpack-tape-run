@@ -1,6 +1,6 @@
 {
   "name": "webpack-tape-run",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The excellent tape-run ported as Webpack plugin",
   "main": "index.js",
   "scripts": {
@@ -25,15 +25,14 @@
   "dependencies": {
     "execspawn": "^1.0.1",
     "run-parallel": "^1.1.6",
-    "tape-run": "^5.0.0",
-    "var": "^0.2.0"
+    "string-to-stream": "^1.1.0",
+    "tape-run": "^5.0.0"
   },
   "devDependencies": {
     "coverify": "^1.4.1",
     "path-browserify": "^1.0.1",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
-    "string-to-stream": "^1.1.0",
     "tape": "^4.8.0",
     "transform-loader": "^0.2.4",
     "webpack": "^5.50.0",
