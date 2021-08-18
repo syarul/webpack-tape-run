@@ -1,23 +1,27 @@
-version: 1.0.{build}
-
-image: Ubuntu
-
-# environment:
-#   matrix:
-#     - nodejs_version: "12"
+environment:
+  matrix:
+    - nodejs_version: "14"
+    - nodejs_version: "12"
+    - nodejs_version: "8"
 
 install:
-  # - ps: Install-Product node $env:nodejs_version
+  - ps: Install-Product node $env:nodejs_version
   # - sh: sudo apt-get update
-  - sh: curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  - sh: sudo apt-get install -y nodejs
-  - export DISPLAY=':99.0'
-  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  # - sh: curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  # - sh: sudo apt-get install -y nodejs
+  # - export DISPLAY=':99.0'
+  # - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - npm install --global npm@latest
+  - set PATH=%APPDATA%\npm;%PATH%
   - npm install
 
+matrix:
+  fast_finish: true
+build: off
+shallow_clone: true
 test_script:
   - node --version
   - npm --version
   - npm test
-
-build: off
+cache:
+  - '%APPDATA%\npm-cache'
