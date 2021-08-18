@@ -1,0 +1,21 @@
+version: 1.0.{build}
+build:
+  verbosity: minimal
+
+environment:
+  nodejs_version: 
+    - "12"
+    - "8"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - npm install
+
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+
+build: off
