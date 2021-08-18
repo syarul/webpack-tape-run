@@ -6,11 +6,6 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  # - sh: sudo apt-get update
-  # - sh: curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  # - sh: sudo apt-get install -y nodejs
-  # - export DISPLAY=':99.0'
-  # - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
   - npm install --global npm@latest
   - set PATH=%APPDATA%\npm;%PATH%
   - npm install
