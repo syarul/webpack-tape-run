@@ -56,6 +56,7 @@ class WebpackTapeRun {
       function exit (callback) {
         stream.on('results', results)
         function results (code) {
+          console.log(code)
           if (!code.ok) addError('tests failed')
           return callback()
         }
