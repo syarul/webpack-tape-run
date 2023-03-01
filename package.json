@@ -26,7 +26,7 @@
     "execspawn": "^1.0.1",
     "run-parallel": "^1.1.6",
     "string-to-stream": "^1.1.0",
-    "tape-run": "^5.0.0"
+    "tape-run": "^10.0.0"
   },
   "devDependencies": {
     "coverify": "^1.4.1",
